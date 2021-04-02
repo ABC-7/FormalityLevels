@@ -1,0 +1,16 @@
+Rreq-8: G((a start_auto_control_button.crrStatus = enabled) ==> F(it.crrStatus = pressed) ==> (F((the start_auto_control_button.crrStatus = enabled) || (it.crrStatus = pressed)) U (it.crrStatus = pressed)))
+%%%
+req_48c1:  G((termiante_auto_control_button.crrStatus = selected) ==> (a confirmation button = available))
+%%%
+req_08: G((air_ok signal = low) ==> (F{t=3}(auto_control_mode.crrStatus = terminated)))
+%%%
+req_28: G((F{t>=180}(a valid blood_pressure = unavailable))l ==> (manual_mode.crrStatus = triggered))
+%%%
+req_17c3: G((alarm_reset_button.crrStatus = pressed) ==> (the alarm.crrStatus = disabled))
+%%%
+req_01: G((RCMVAR_lstat = RCMVAL_poweredon) ==> (the cara = operational))
+%%%
+req_17c1: G((auto_control_mode.crrStatus = running) ==> (the cuff.crrStatus = inflatde))
+%%%
+req_34: G((auto_control_mode.crrStatus = running) ==> (terminate_auto_control_button = available))
+%%%

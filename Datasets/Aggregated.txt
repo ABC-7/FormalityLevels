@@ -1,0 +1,116 @@
+TempReqId-1-1: G((G{t=5}(¬receive(the monitor, signal RCMVAR_e))) ==> (send_to(it, RCMVAR_req, the station)))
+%%%
+TempReqId-28-1: G(G(((the aircraft = RCMVAL_onground) ∧ ¬ (¬the aircraft = RCMVAL_onground) ∧ F(¬the aircraft = RCMVAL_onground)) ==> (F((RCMTECHTERM_reverse_thrust.crrStatus = command) || (¬the aircraft = RCMVAL_onground)) U (¬the aircraft = RCMVAL_onground))) ==> (enable(the control system, deployment of the thrust reverser)))
+%%%
+TempReqId-16-1: G((RCMTECHTERM_liquid_level_2.crrStatus = reached) ==> (the 60 second timer = started))
+%%%
+TempReqId-48-1: G(((the door = opened) ==> (F{t<=15}(the door.crrStatus = locked))) ==> (alarm = triggered))
+%%%
+TempReqId-36-1: G(G(((the sea conditions = True) ∧ ¬ (¬the sea conditions = True) ∧ F(¬the sea conditions = True)) ==> (F((radar.crrStatus = sighting) || (¬the sea conditions = True)) U (¬the sea conditions = True))) ==> (F{t<=3}(fire(the weapon operator, a missile))))
+%%%
+TempReqId-24-1: G((the computed airspeed fault flag.crrStatus = set) ==> (use(the control system, modelled airspeed)))
+%%%
+TempReqId-12-1: G(G(((¬RCMTECHTERM_liquid_level_1.crrStatus = reach) ∧ ¬ (¬RCMTECHTERM_liquid_level_1.crrStatus = reach) ∧ F(¬RCMTECHTERM_liquid_level_1.crrStatus = reach)) ==> (F((start button.crrStatus = press) || (¬RCMTECHTERM_liquid_level_1.crrStatus = reach)) U (¬RCMTECHTERM_liquid_level_1.crrStatus = reach))) ==> F(the emergency button.crrStatus = press) ==> (F((open(the RCMTECHTERM_liquid_open_mixer_controller, RCMVAR_valve_0)) || (the emergency button.crrStatus = press) U (the emergency button.crrStatus = press)))
+%%%
+TempReqId-56-1: G(((G{t=2}(RCMVAR_x = RCMVAL_true)) ==> (G{t=1}(RCMVAR_z = 1))) ==> (G(F{t=2}(RCMVAR_y = RCMVAL_true))))
+%%%
+TempReqId-44-1: G(F(the RCMTECHTERM_railroad_crossing.crrStatus = safeguard) ==> (F((G{t=6}(in(the gates, the RCMTECHTERM_closed_state))) || (the RCMTECHTERM_railroad_crossing.crrStatus = safeguard)) U (the RCMTECHTERM_railroad_crossing.crrStatus = safeguard)))
+%%%
+TempReqId-32-1: G((lead_to(a single failure, RCMTECHTERM_deficient_aircraft_supplied_data)) ==> (¬cause(the RCMTECHTERM_engine_control_system, a hazardous engine effect)))
+%%%
+TempReqId-20-1: G((emergency button.crrStatus = press) ==> (close(the RCMTECHTERM_liquid_open_mixer_controller, RCMVAR_valve_2)))
+%%%
+TempReqId-52-1: G(((G{t=2}(RCMVAR_x = RCMVAL_true)) ==> (RCMVAR_z > RCMVAR_m)) ==> (G(F{t=2}(RCMVAR_y = RCMVAL_true))))
+%%%
+TempReqId-40-1: G((detect_at(a defect, a certain valve)) ==> (G{t=2}(the RCMTECHTERM_software_control_system.crrStatus = switch)))
+%%%
+TempReqId-40-2: G((the RCMTECHTERM_software_control_system.crrStatus = switch) ==> (the RCMTECHTERM_redundant_pneumatic_control.crrStatus = switch))
+%%%
+TempReqId-5-1: G((countdown timer.crrStatus = expire) ==> (close(the RCMTECHTERM_automatic_door_controller, door)))
+%%%
+TempReqId-9-1: G((check(RCMVAR_simplemat, the personal_code)))
+%%%
+TempReqId-19-1: G((emergency button.crrStatus = press) ==> (close(the RCMTECHTERM_liquid_open_mixer_controller, RCMVAR_valve_1)))
+%%%
+TempReqId-39-1: G((pass(the train, the RCMTECHTERM_railroad_crossing)) ==> (the gates.crrStatus = open))
+%%%
+TempReqId-27-1: G((include(the control system, an overspeed protection function)) ==> F(aircraft dispatch = RCMVAL_True) ==> (F((test(the control system, the availability of the overspeed protection function)) || (aircraft dispatch = RCMVAL_True)) U (aircraft dispatch = RCMVAL_True)))
+%%%
+TempReqId-15-1: G((RCMTECHTERM_liquid_level_2.crrStatus = reach) ==> (close(the RCMTECHTERM_liquid_open_mixer_controller, RCMVAR_valve_1)))
+%%%
+TempReqId-47-1: G((transmission = RCMVAL_True) ==> (the RCMTECHTERM_engine_control_system = RCMTECHTERM_single_fault_tolerant))
+%%%
+TempReqId-35-1: G((G{t>=50}(an obstacle.crrStatus = detect)) ==> (G{t>=1}(the window down signal.crrStatus = activate)))
+%%%
+TempReqId-23-1: G((commmand(continuous ignition, the aircraft)) ==> (switch_on(the control system, continuous ignition)))
+%%%
+TempReqId-11-1: G((¬the RCMTECHTERM_personal_code = valid) ==> (reject(RCMVAR_simplemat, the card)))
+%%%
+TempReqId-55-1: G((G(F{t=1}(RCMVAR_z = 1))) ==> F(RCMVAR_x = 0) ==> (F((G{t<=1}(RCMVAR_y = RCMVAL_True)) || (RCMVAR_x = 0)) U (RCMVAR_x = 0)))
+%%%
+TempReqId-43-1: G(((the level of the tank < the minimumvalue) ==> (the temperature sensor > the value 350)) ==> (the inflow.crrStatus = open))
+%%%
+TempReqId-31-1: G((change(the RCMTECHTERM_engine_control_system, operational mode)) ==> (maintain_within(the RCMTECHTERM_engine_control_system, the engine, RCMTECHTERM_approved_operational_limits)))
+%%%
+TempReqId-51-1: G((catch(the wolf, a bird)))
+%%%
+TempReqId-4-1: G((RCMTECHTERM_object_proximity_sensor.crrStatus = activate) ==> (open(the RCMTECHTERM_automatic_door_controller, door)))
+%%%
+TempReqId-8-1: G((RCMTECHTERM_door_closing_limit_sensor.crrStatus = activate) ==> (stop(the RCMTECHTERM_automatic_door_controller, door)))
+%%%
+TempReqId-18-1: G((emergency button.crrStatus = press) ==> (close(the RCMTECHTERM_liquid_open_mixer_controller, RCMVAR_valve_0)))
+%%%
+TempReqId-38-1: G((G(F{t=10}(produce(the coffee machine, hot drink)))))
+%%%
+TempReqId-26-1: G(G(((the reverser door translation = RCMVAL_True) ∧ ¬ (¬the reverser door translation = RCMVAL_True) ∧ F(¬the reverser door translation = RCMVAL_True)) ==> (F((limit(the control system, minimum idle, thrust to)) || (¬the reverser door translation = RCMVAL_True)) U (¬the reverser door translation = RCMVAL_True))))
+%%%
+TempReqId-14-1: G(G(((¬RCMTECHTERM_liquid_level_2.crrStatus = reach) ∧ ¬ (¬RCMTECHTERM_liquid_level_2.crrStatus = reach) ∧ F(¬RCMTECHTERM_liquid_level_2.crrStatus = reach)) ==> (F((RCMTECHTERM_liquid_level_1.crrStatus = reach) || (¬RCMTECHTERM_liquid_level_2.crrStatus = reach)) U (¬RCMTECHTERM_liquid_level_2.crrStatus = reach))) ==> F(emergency button.crrStatus = press) ==> (F((open(the RCMTECHTERM_liquid_open_mixer_controller, RCMVAR_valve_1)) || (emergency button.crrStatus = press)) U (emergency button.crrStatus = press)))
+%%%
+TempReqId-46-1: G(G(((the window.crrStatus = move) ∧ ¬ (¬the window.crrStatus = move) ∧ F(¬the window.crrStatus = move)) ==> (F((the RCMTECHTERM_engine_control_system = RCMTECHTERM_single_fault_tolerant) || (¬the window.crrStatus = move)) U (¬the window.crrStatus = move))))
+%%%
+TempReqId-22-1: G((prevent(the control system, engine overspeed)))
+%%%
+TempReqId-10-1: G((the RCMTECHTERM_personal_code = valid) ==> (accept(RCMVAR_simplemat, the card)))
+%%%
+TempReqId-54-1: G(F(G{t=2}(RCMVAR_x = RCMVAL_true)) ==> (F((G{t=1}(RCMVAR_z = 1)) || (G{t=2}(RCMVAR_x = RCMVAL_true))) U (G{t=2}(RCMVAR_x = RCMVAL_true))) ==> (G(F{t=1}(RCMVAR_y = RCMVAL_true))))
+%%%
+TempReqId-42-1: G(F(the temperature sensor > the value 400) ==> (F((the inflow.crrStatus = open) || (the temperature sensor > the value 400)) U (the temperature sensor > the value 400)))
+%%%
+TempReqId-30-1: G(((idle setting.crrStatus = select) ==> (aircraft data = unavailable)) ==> (select(the control system, idle approach)))
+%%%
+TempReqId-50-1: G((eat(RCMVAR_a, RCMVAR_b)))
+%%%
+TempReqId-3-1: G((timer = previous timer #Plus 1))
+%%%
+TempReqId-7-1: G((RCMTECHTERM_object_proximity_sensor.crrStatus = activate) ==> (open(the RCMTECHTERM_automatic_door_controller, door)))
+%%%
+TempReqId-2-1: G((timer > RCMVAR_timeout) ==> (RCMVAR_timeout = RCMVAL_error))
+%%%
+TempReqId-29-1: G(G(((the aircraft = RCMVAL_inflight) ∧ ¬ (¬the aircraft = RCMVAL_inflight) ∧ F(¬the aircraft = RCMVAL_inflight)) ==> (F((RCMTECHTERM_reverse_thrust.crrStatus = command) || (¬the aircraft = RCMVAL_inflight)) U (¬the aircraft = RCMVAL_inflight))) ==> (inhibit(the control system, RCMTECHTERM_thrust_reverser_deployment)))
+%%%
+TempReqId-17-1: G((the 60 second timer = started) ==> (the 120 second timer = started))
+%%%
+TempReqId-49-1: G(((F{t=2}(blood pressure.crrStatus = monitor)) ==> (G{t>4}(the blood pressure > 200))) ==> (the medical staff = notified))
+%%%
+TempReqId-37-1: G(G(((the absence of external power = RCMVAL_True) ∧ ¬ (¬the absence of external power = RCMVAL_True) ∧ F(¬the absence of external power = RCMVAL_True)) ==> (F((reduce_with(the communication system, telephone contact, 10)) || (¬the absence of external power = RCMVAL_True)) U (¬the absence of external power = RCMVAL_True))))
+%%%
+TempReqId-25-1: G(G(((the aircraft = RCMVAL_inflight) ∧ ¬ (¬the aircraft = RCMVAL_inflight) ∧ F(¬the aircraft = RCMVAL_inflight)) ==> (F((maintain_above(the control system, engine fuel,RCMVAR_xx)) || (¬the aircraft = RCMVAL_inflight)) U (¬the aircraft = RCMVAL_inflight))))
+%%%
+TempReqId-13-1: G((RCMTECHTERM_liquid_level_1.crrStatus = reach) ==> (close(the RCMTECHTERM_liquid_open_mixer_controller, RCMVAR_valve_0)))
+%%%
+TempReqId-45-1: G(G(((moving = RCMVAL_True) ∧ ¬ (¬moving = RCMVAL_True) ∧ F(¬moving = RCMVAL_True)) ==> (F((the RCMTECHTERM_engine_control_system = RCMTECHTERM_single_fault_tolerant) || (¬moving = RCMVAL_True)) U (¬moving = RCMVAL_True))))
+%%%
+TempReqId-33-1: G(G(((a RCMVAL_fullup configuration = RCMVAL_True) ∧ ¬ (¬a RCMVAL_fullup configuration = RCMVAL_True) ∧ F(¬a RCMVAL_fullup configuration = RCMVAL_True)) ==> (F((the RCMTECHTERM_engine_control_system = RCMTECHTERM_single_fault_tolerant) || (¬a RCMVAL_fullup configuration = RCMVAL_True)) U (¬a RCMVAL_fullup configuration = RCMVAL_True))))
+%%%
+TempReqId-21-1: G((emergency button.crrStatus = press) ==> (the RCMTECHTERM_liquid_open_mixer_controller.crrStatus = stop))
+%%%
+TempReqId-53-1: G((G{t=2}(RCMVAR_x = RCMVAL_true)) ==> (the entry.crrValue = 1))
+%%%
+TempReqId-41-1: G(((the RCMTECHTERM_railroad_crossing.crrStatus = vacate) ==> (the train.crrStatus = pass)) ==> (the safeguard of a RCMTECHTERM_level_crossing.crrStatus = terminate))
+%%%
+TempReqId-6-1: G((RCMTECHTERM_door_closing_limit_sensor.crrStatus = activate) ==> (stop(the RCMTECHTERM_automatic_door_controller, door)))
+%%%
+TempReqId-57-1: G(((the button.crrStatus = press) ==> (F{t=10}(RCMVAR_x = RCMVAL_on))) ==> (RCMVAR_y = RCMVAL_true))
+%%%
+TempReqId-34-1: G((G{t=50}(an obstacle.crrStatus = detect)) ==> (G{t=1}(the window down signal.crrStatus = activate)))
+%%%

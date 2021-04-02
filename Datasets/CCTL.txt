@@ -1,0 +1,85 @@
+fa_4-1: G((the distance to the RCMTECHTERM_vehicle_ahead < the specified speed dependent safety distance)) ==> (the vehicle brakes.crrStatus = activated))
+%%%
+al_105-1: G((G{t>=5}(hold_to(the driver, the RCMTECHTERM_pitman_arm, RCMVAL_tip_blinking_left))) ==> F(leave(the RCMTECHTERM_pitman_arm, RCMVAL_tip_blinking_left)) ==> (F((release_for(a flashing, the left direction indicators)) || (leave(the RCMTECHTERM_pitman_arm, RCMVAL_tip_blinking_left))) U (leave(the RCMTECHTERM_pitman_arm, RCMVAL_tip_blinking_left))))
+%%%
+fa_6-1: G((the distance to the RCMTECHTERM_preceding_vehicle > the speed_dependent safety distance) ==> F(the set speed.crrStatus = reach) ==> (F((F{t=2}(the vehicle.crrStatus = accelerate)) || (the set speed.crrStatus = reach)) U (the set speed.crrStatus = reach)))
+%%%
+fa_35-1: G((the RCMTECHTERM_gas_pedal > 90) ==> (the speed limit.crrStatus = deactivated))
+%%%
+fa_99-1: G((the speed of the RCMTECHTERM_preceding_vehicle < 20) ==> (the distance = 2))
+%%%
+fa_99-2: G((both vehicles.crrStatus = standing) ==> (the absolute distance = 2m))
+%%%
+fa_99-4: G((the RCMTECHTERM_preceding_vehicle.crrStatus = accelerating) ==> F(the vehicle speed > 20) ==> (F((the distance = 3) || (the vehicle speed > 20)) U (the vehicle speed > 20)))
+%%%
+fa_31-1: G((the current vehicle speed = speed limit))
+%%%
+TempReqId-18-1: G((the duration of a flashing cycle = 1 second))
+%%%
+fa_81-1: G((the calculated distance < t) ==> (issue(the adaptive cruise control system, acoustic alarm))) 
+%%%
+fa_81-2: G((the calculated distance < t2) ==> (issue(it, visual warning)))
+%%%
+TempReqId-28-1: G((the voltage in the vehicle electrical system < 8) ==> (a subvoltage = present))
+%%%
+TempReqId-16-1: G((the RCMTECHTERM_hazard_warning_light_switch.crrStatus = released) ==> (direction indicators.crrStatus = flash))
+%%%
+TempReqId-16-2: G((in(the ignition key, the ignition lock)) ==> (the pulse ratio = 1))
+%%%
+TempReqId-16-3: G((¬in(the ignition key, the lock)) ==> (the pulse ratio = 5))
+%%%
+TempReqId-26-1: G((the light rotary switch = RCMVAL_auto) ==> (the adaptive RCMTECHTERM_high_beam_headlights.crrStatus = activated))
+%%%
+TempReqId-14-1: G((the cognitive threshold of a human observer = the deviation))
+%%%
+TempReqId-24-1: G((the darkness switch.crrStatus = activated) ==> (¬the ambient lighting.crrStatus = activated))
+%%%
+TempReqId-12-1: G((the RCMTECHTERM_brake_pedal > RCMVAR_m) ==> (the RCMTECHTERM_braking_force = 100))
+%%%
+TempReqId-34-1: G((¬RCMTECHTERM_advancing_vehicle.crrStatus = recognized) ==> (F{t=2}(the high beam illumination.crrStatus = restored)))
+%%%
+TempReqId-22-1: G((the daytime running light.crrStatus = activate) ==> (start(the engine) ==> (the low beam headlights.crrStatus = activate))
+%%%
+TempReqId-22-2: G((the ambient light.crrStatus = activate)==> (the low beam headlights=active))
+%%%
+TempReqId-32-1: G((the voltage in the vehicle electrical system > 14) ==> (an overvoltage = present))
+%%%
+TempReqId-20-1: G((flashing cycles > 1000) ==> (¬the cumulated deviation > 5))
+%%%
+TempReqId-30-1: G((a subvoltage = present) ==> (¬the ambient light = available))
+%%%
+fa_19-1: G((activate(the cruise control lever, the cruise control)))
+%%%
+fa_36-1: G((the pressure on the RCMTECHTERM_gas_pedal < 90) ==> (the speed limit.crrStatus = activated))
+%%%
+fa_5-1: G(F(a collision with the RCMTECHTERM_vehicle_ahead = RCMVAL_True) ==> (F((the maximum deceleration = RCMVAL_insufficient_to_stop) || (a collision with the RCMTECHTERM_vehicle_ahead = RCMVAL_True)) U (a collision with the RCMTECHTERM_vehicle_ahead = RCMVAL_True)) ==> (G(F{t=2}(G{t=1}(warn_by(the vehicle, the driver, acoustical signals))))))
+%%%
+fa_5-2: G((the maximum deceleration = 5))
+%%%
+al_144-1: G((the maximum deviation of the pulse ratio < the cognitive threshold of a human observer))
+%%%
+fa_32-1: G((the speed limit function.crrStatus = activated) ==> (¬the current speed > the RCMTECHTERM_set_speed_limit))
+%%%
+fa_86-1: G((the velocity window < 20) ==> (the distance to the RCMTECHTERM_vehicle_ahead.crrStatus = calculated))
+%%%
+TempReqId-19-1: G(F(the RCMTECHTERM_hazard_warning_light_switch.crrStatus = deactivate) ==> (F((RCMTECHTERM_tip_blinking.crrStatus = activate) || (the RCMTECHTERM_hazard_warning_light_switch.crrStatus = deactivate)) U (the RCMTECHTERM_hazard_warning_light_switch.crrStatus = deactivate)) ==> G(((the deactivation of the RCMTECHTERM_hazard_warning_light_switch = RCMVAL_True) ∧ ¬ (¬the deactivation of the RCMTECHTERM_hazard_warning_light_switch = RCMVAL_True) ∧ F(¬the deactivation of the RCMTECHTERM_hazard_warning_light_switch = RCMVAL_True)) ==> F((¬it.crrStatus = activate) || (¬the deactivation of the RCMTECHTERM_hazard_warning_light_switch = RCMVAL_True)) U (¬the deactivation of the RCMTECHTERM_hazard_warning_light_switch = RCMVAL_True))))
+%%%
+TempReqId-29-1: G((a subvoltage = present) ==> (¬the adaptive RCMTECHTERM_high_beam_headlight = available))
+%%%
+TempReqId-17-1: G((an emergency situation=True) ==> F(the car battery = empty) ==> (F((the RCMTECHTERM_hazard_warning_light_switch = active) || (the car battery = empty)) U (the car battery = empty)))
+%%%
+TempReqId-27-1: G((recognize(the camera, the lights of an RCMTECHTERM_advancing_vehicle)) ==> (F{t=5}(the RCMTECHTERM_high_beam_headlight = low beam headlight)))
+%%%TempReqId-25-1: G((the darkness switch.crrStatus = activate) ==> (¬the RCMTECHTERM_cornering_light.crrStatus = activate))
+%%%
+TempReqId-35-1: G((the RCMTECHTERM_pitman_arm.crrStatus = pulled) ==> (the RCMTECHTERM_high_beam_headlight.crrStatus = activated))
+%%%
+TempReqId-23-1: G(((the exterior brightness = lower) ==> (the light rotary switch = RCMVAL_automatic)) ==> (G{t>=3}(the low beam headlights.crrStatus = activate)))
+%%%
+TempReqId-23-2: G((the exterior brightness > RCMVAR_s2) ==> (G{t>=3}(the low beam headlights.crrStatus = deactivate)))
+%%%
+TempReqId-33-1: G((an overvoltage = present) ==> (the headlight.crrStatus = activate))
+%%%
+TempReqId-21-1: G((the light rotary switch = RCMVAL_exterior_lights_on) ==> (activate(the driver, the low beam headlights)))
+%%%
+TempReqId-31-1: G((a subvoltage = present) ==> (¬the RCMTECHTERM_cornering_light = available))
+%%%

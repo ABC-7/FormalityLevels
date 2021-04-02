@@ -1,0 +1,67 @@
+req_17: G([((it = dark) AND (lights = RCMVAL_on))] ==> F(it = bright) ==> (F((the lights = RCMVAL_on) || (it = bright)) U (it = bright)))
+%%%
+req_7: G((the fuel level = low) ==> (G{t<=10}(the fuel display.crrStatus = blinks)))
+%%%
+req_2: G(G(((an obstacle.crrStatus = detected) ∧ ¬ (¬an obstacle.crrStatus = detected) ∧ F(¬an obstacle.crrStatus = detected)) ==> (F((the parking sensor.crrStatus = beeps) || (¬an obstacle.crrStatus = detected)) U (¬an obstacle.crrStatus = detected))))
+%%%
+req_6: G(G(((an obstacle.crrStatus = detected) ∧ ¬ (¬an obstacle.crrStatus = detected) ∧ F(¬an obstacle.crrStatus = detected)) ==> (F((G{t<=10}(the parking sensor.crrStatus = beeps)) || (¬an obstacle.crrStatus = detected)) U (¬an obstacle.crrStatus = detected))))
+%%%
+req_4: G((the fuel level = low) ==> (the fuel display.crrStatus = blinks))
+%%%
+req_8: G((a crash.crrStatus = detected) ==> (F{t<=10}(an emergency signal.crrStatus = sent)))
+%%%
+req_16: G((it.crrStatus = rain) ==> (F{t=30}(the wipers = RCMVAL_on)))
+%%%
+req_26: G((the display elements. crrStatus = glow))
+%%%
+req_14: G((it.crrStatus = rain) ==> (G{t=30}(the wipers = RCMVAL_on)))
+%%%
+req_24: G((the electricity circuit = active))
+%%%
+req_18: G((G{t=1}(it.crrStatus = rain)) ==> (the wipers.crrStatus = activate))
+%%%
+req_28: G((F{t<=5}(the radio.crrStatus = powered)))
+%%%
+req_30: G(F(crash.crrStatus = detected) ==> (F((¬the airbag.crrStatus = activated) || (a crash.crrStatus = detected)) U (a crash.crrStatus = detected)))
+%%%
+req_12: G((it.crrStatus = rains) ==> (G{t=30}(the wipers = active)))
+%%%
+req_22: G((G{t=1}(it.crrStatus = rains)) ==> (F{t=1}(the wipers = active)))
+%%%
+req_10: G((a crash.crrStatus = detected) ==> (an emergency signal.crrStatus = sent))
+%%%
+req_32: G((it = dark) ==> F(it = bright) ==> (F((G{t<=10}(the lights = RCMVAL_on)) || (it = bright)) U (it = bright)))
+%%%
+req_20: G((G{t=1}(it.crrStatus = rains)) ==> F(the windscreen = dry) ==> (F((F{t<=30}(the wipers.crrStatus = activated)) || (the windscreen = dry)) U (the windscreen = dry)))
+%%%
+req_3: G(G(((the fuel level = low) ∧ ¬ (¬the fuel level = low) ∧ F(¬the fuel level = low)) ==> (F((the fuel display.crrStatus = blinks) || (¬the fuel level = low)) U (¬the fuel level = low))))
+%%%
+req_1: G(G(((it.crrStatus = rains) ∧ ¬ (¬it.crrStatus = rains) ∧ F(¬it.crrStatus = rains)) ==> (F((the wipers = active) || (¬it.crrStatus = rains)) U (¬it.crrStatus = rains))))
+%%%
+req_5: G(G(((it.crrStatus = rains) ∧ ¬ (¬it.crrStatus = rains) ∧ F(¬it.crrStatus = rains)) ==> (F((G{t<=10}(the wipers = active)) || (¬it.crrStatus = rains)) U (¬it.crrStatus = rains))))
+%%%
+req_9: G((a crash.crrStatus = detected) ==> (F{t<=10}(an emergency signal.crrStatus = sent)))
+%%%
+req_27: G((F{t<=1}(the motor = RCMVAL_on)))
+%%%
+req_15: G((it.crrStatus = rains) ==> (F{t<=30}(the wipers = RCMVAL_on)))
+%%%
+req_25: G((the light = RCMVAL_on))
+%%%
+req_13: G((it.crrStatus = rains) ==> (G{t=30}(the wipers = RCMVAL_on)))
+%%%
+req_19: G((G{t=1}(it.crrStatus = rain)) ==> (F{t<=30}(the wipers.crrStatus = activated)))
+%%%
+req_29: G((a crash.crrStatus = detected) ==> (the airbag.crrStatus = activated))
+%%%
+req_17: G([((it = dark) AND (lights = RCMVAL_on))] ==> F(it = bright) ==> (F((the lights = RCMVAL_on) || (it = bright)) U (it = bright)))
+%%%
+req_23: G((G{t=1}(it.crrStatus = rains)) ==> (F{t=1}(G{t=30}(the wipers = active))))
+%%%
+req_11: G([((it = rains) AND (the wipers = active))] ==> (G{t=30}(the wipers = active)))
+%%%
+req_33: G((a crash.crrStatus = detected) ==> F((an emergency signal.crrStatus = sent) ==> (the airbag.crrStatus = activated)))
+%%%
+req_21: G((G{t=1}(it.crrStatus = rains)) ==> (F{t=1}(G{t=30}(the wipers = active))))
+%%%
+req_31: G((the in front vehicle.crrStatus = decelerates) ==> F(G{t<=2}(the safety_distance.crrStatus = restored)) ==> (F((the vehicle.crrStatus = decelerates) || (G{t<=2}(the safety_distance.crrStatus = restored))) U (G{t<=2}(the safety_distance.crrStatus = restored))))
