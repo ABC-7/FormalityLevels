@@ -1,0 +1,115 @@
+TempReqId-1-1: If The monitor receives signal RCMVAR_e , it shall send RCMVAR_req to the station 
+
+TempReqId-28-1: If RCMTECHTERM_reverse_thrust is command before the aircraft is RCMVAL_onground , the control system shall enable deployment of the thrust reverser 
+
+TempReqId-16-1: If RCMTECHTERM_liquid_level_2 is reached , the 60 second timer shall be started 
+
+TempReqId-48-1: When The door is opened , if The door is locked within at most 15 seconds , alarm shall be triggered 
+
+TempReqId-36-1: If Radar is sighting before the sea conditions is True , the weapon operator shall fire a missile within at most 3 seconds 
+
+TempReqId-24-1: If The computed airspeed fault flag is set , the control system shall be used modelled airspeed 
+
+TempReqId-12-1: If Start button is press before RCMTECHTERM_liquid_level_1 is reached , the RCMTECHTERM_liquid_open_mixer_controller shall open RCMVAR_valve_0 
+
+TempReqId-56-1: When RCMVAR_x is RCMVAL_true , if RCMVAR_z is 1 , every 2 seconds RCMVAR_y shall be RCMVAL_true 
+
+TempReqId-44-1: Before The RCMTECHTERM_railroad_crossing is safeguard , the gates shall be in the RCMTECHTERM_closed_state 
+
+TempReqId-32-1: If A single failure leads to RCMTECHTERM_deficient_aircraft_supplied_data , the RCMTECHTERM_engine_control_system shall  cause a hazardous engine effect 
+
+TempReqId-20-1: If Emergency button is pressed , the RCMTECHTERM_liquid_open_mixer_controller shall close RCMVAR_valve_2 
+
+TempReqId-52-1: When RCMVAR_x is RCMVAL_true , if RCMVAR_z exceeds RCMVAR_m , every 2 seconds RCMVAR_y shall be RCMVAL_true 
+
+TempReqId-40-1: If A defect detects a certain valve , the RCMTECHTERM_software_control_system shall be switched 
+
+TempReqId-40-2: If The RCMTECHTERM_software_control_system is switched , the RCMTECHTERM_redundant_pneumatic_control shall be switched 
+
+TempReqId-5-1: If Countdown timer is expired , the RCMTECHTERM_automatic_door_controller shall close door 
+
+TempReqId-9-1: , RCMVAR_simplemat shall check the personal_code 
+
+TempReqId-19-1: If Emergency button is pressed , the RCMTECHTERM_liquid_open_mixer_controller shall close RCMVAR_valve_1 
+
+TempReqId-39-1: If The train passes the RCMTECHTERM_railroad_crossing , the gates shall be opened
+
+TempReqId-27-1: If The control system includes an overspeed protection function before Aircraft dispatch is RCMVAL_True , the control system shall test the availability of the overspeed protection function 
+
+TempReqId-15-1: If RCMTECHTERM_liquid_level_2 is reached , the RCMTECHTERM_liquid_open_mixer_controller shall close RCMVAR_valve_1 
+
+TempReqId-47-1: If Transmission is RCMVAL_True , the RCMTECHTERM_engine_control_system shall be RCMTECHTERM_single_fault_tolerant 
+
+TempReqId-35-1: If An obstacle is detected , the window down signal shall be activated 
+
+TempReqId-23-1: If Continuous ignition commands the aircraft , the control system shall switch continuous ignition 
+
+TempReqId-11-1: If the RCMTECHTERM_personal_code is valid , RCMVAR_simplemat shall reject the card 
+
+TempReqId-55-1: If RCMVAR_z is 1 before RCMVAR_x is 0 , RCMVAR_y shall be RCMVAL_True 
+
+TempReqId-43-1: When The level of the tank is less than the minimumvalue , if The temperature sensor exceeds the value 350 , the inflow shall be opened 
+
+TempReqId-31-1: If The RCMTECHTERM_engine_control_system changes operational mode , the RCMTECHTERM_engine_control_system shall maintain the engine RCMTECHTERM_approved_operational_limits 
+
+TempReqId-51-1: , the wolf shall caught a bird 
+
+TempReqId-4-1: If RCMTECHTERM_object_proximity_sensor is activated , the RCMTECHTERM_automatic_door_controller shall open door 
+
+TempReqId-8-1: If RCMTECHTERM_door_closing_limit_sensor is activated , the RCMTECHTERM_automatic_door_controller shall stop door 
+
+TempReqId-18-1: If Emergency button is pressed , the RCMTECHTERM_liquid_open_mixer_controller shall close RCMVAR_valve_0 
+
+TempReqId-38-1: , every 10 seconds the coffee machine shall produc hot drink 
+
+TempReqId-26-1: Before the reverser door translation is RCMVAL_True , the control system shall be limited to minimum idle thrust
+
+TempReqId-14-1: If RCMTECHTERM_liquid_level_1 is reached before RCMTECHTERM_liquid_level_2 is reached , the RCMTECHTERM_liquid_open_mixer_controller shall open RCMVAR_valve_1 
+
+TempReqId-46-1: Before the window is moved , the RCMTECHTERM_engine_control_system shall be RCMTECHTERM_single_fault_tolerant 
+
+TempReqId-22-1: , the control system shall prevent engine overspeed 
+
+TempReqId-10-1: If The RCMTECHTERM_personal_code is valid , RCMVAR_simplemat shall accept the card 
+
+TempReqId-54-1: If RCMVAR_z is 1 before RCMVAR_x is RCMVAL_true , every 1 seconds RCMVAR_y shall be RCMVAL_true 
+
+TempReqId-42-1: Before The temperature sensor exceeds the value 400 , the inflow shall be opened 
+
+TempReqId-30-1: When Idle setting is selected , if Aircraft data is unavailable , the control system shall select idle approach 
+
+TempReqId-50-1: , RCMVAR_a shall eat RCMVAR_b 
+
+TempReqId-3-1: , timer shall be previous timer #Plus 1 
+
+TempReqId-7-1: If RCMTECHTERM_object_proximity_sensor is activated , the RCMTECHTERM_automatic_door_controller shall open door 
+
+TempReqId-2-1: If Timer exceeds RCMVAR_timeout , RCMVAR_timeout shall be RCMVAL_error 
+
+TempReqId-29-1: If RCMTECHTERM_reverse_thrust is commanded before the aircraft is RCMVAL_inflight , the control system shall inhibit RCMTECHTERM_thrust_reverser_deployment 
+
+TempReqId-17-1: If The 60 second timer is started , the 120 second timer shall be started 
+
+TempReqId-49-1: When Blood pressure is monitored , if The blood pressure exceeds 200 , the medical staff shall be notified 
+
+TempReqId-37-1: Before the absence of external power is RCMVAL_True , the communication system shall sustain telephone contact with 10 
+
+TempReqId-25-1: Before the aircraft is RCMVAL_inflight , the control system shall maintain engine fuelRCMVAR_xx 
+
+TempReqId-13-1: If RCMTECHTERM_liquid_level_1 is reached , the RCMTECHTERM_liquid_open_mixer_controller shall close RCMVAR_valve_0 
+
+TempReqId-45-1: Before moving is RCMVAL_True , the RCMTECHTERM_engine_control_system shall be RCMTECHTERM_single_fault_tolerant 
+
+TempReqId-33-1: Before a RCMVAL_fullup configuration is RCMVAL_True , the RCMTECHTERM_engine_control_system shall be RCMTECHTERM_single_fault_tolerant 
+
+TempReqId-21-1: If Emergency button is pressed , the RCMTECHTERM_liquid_open_mixer_controller shall be stopped 
+
+TempReqId-53-1: If RCMVAR_x is RCMVAL_true , the entry_crrValue shall be 1 
+
+TempReqId-41-1: When The RCMTECHTERM_railroad_crossing is vacated , if The train is pass , the safeguard of a RCMTECHTERM_level_crossing shall be terminated 
+
+TempReqId-6-1: If RCMTECHTERM_door_closing_limit_sensor is activated , the RCMTECHTERM_automatic_door_controller shall stop door 
+
+TempReqId-57-1: When The button is pressed , if RCMVAR_x is RCMVAL_on within 10 seconds , RCMVAR_y shall be RCMVAL_true 
+
+TempReqId-34-1: If An obstacle is detected , the window down signal shall be activateed 

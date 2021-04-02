@@ -1,0 +1,39 @@
+TempReqId-2: If The regulator mode is RCMVAL_init , the output regulator status shall be RCMVAL_init 
+
+TempReqId-1: If The regulator mode is RCMVAL_init , the output regulator status shall be RCMVAL_init 
+
+TempReqId-19: If The reset is RCMVAL_true , the regulator mode shall be RCMVAL_init 
+
+TempReqId-18: If The monitor mode is RCMVAL_failed , the regulator mode shall be RCMVAL_normal 
+
+TempReqId-17: If The regulator mode is RCMVAL_failed , the regulator mode shall be RCMVAL_normal 
+
+TempReqId-16: If The monitor status is RCMVAL_false , the monitor init timeout shall be RCMVAL_true 
+
+TempReqId-15: If The monitor status is RCMVAL_true , the monitor init timeout shall be RCMVAL_false 
+
+TempReqId-14: , the monitor mode shall be RCMVAL_init 
+
+TempReqId-13: If The regulator status is RCMVAL_false , the regulator init timeout shall be RCMVAL_true 
+
+TempReqId-12: If The regulator status is RCMVAL_true , the regulator init timeout shall be RCMVAL_false 
+
+TempReqId-11: , the regulator mode shall be RCMVAL_init 
+
+TempReqId-10: , the manage monitor interface mode shall be the monitor mode 
+
+TempReqId-20: If The regulator mode is RCMVAL_init , the reset shall be RCMVAL_true 
+
+TempReqId-4: When The signal is RCMVAL_ok , if The regulator mode is RCMVAL_failed , the output regulator status shall be RCMVAL_failed 
+
+TempReqId-3: If The regulator mode is RCMVAL_normal , the output regulator status shall be RCMVAL_status_on 
+
+TempReqId-6: If The manage monitor interface mode is RCMVAL_init , the output monitor status shall be RCMVAL_init 
+
+TempReqId-5: If The regulator mode is RCMVAL_failed , the heat control shall be RCMVAL_control_off 
+
+TempReqId-8: If The manage monitor interface mode is RCMVAL_failed , the output monitor status shall be RCMVAL_failed 
+
+TempReqId-7: If The manage monitor interface mode is RCMVAL_normal , the output monitor status shall be RCMVAL_status_on 
+
+TempReqId-9: If The monitor mode is RCMVAL_init , the alarm control shall be RCMVAL_control_off 

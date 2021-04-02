@@ -1,0 +1,68 @@
+req_17: If It is dark and Light is RCMVAL_on before It is bright , the lights shall be RCMVAL_on 
+
+req_7: If The fuel level is low , the fuel display shall be blinks 
+
+req_2: Before an obstacle is detected , the parking sensor shall be beeps 
+
+req_6: Before an obstacle is detected , the parking sensor shall be beeps 
+
+req_4: If The fuel level is low , the fuel display shall be blinks 
+
+req_8: If A crash is detected , an emergency signal shall be sent within at most 10 seconds 
+
+req_16: If It is rain , the wipers shall be RCMVAL_on within 30 seconds 
+
+req_26: , the display elements_ crrStatus shall be glow 
+
+req_14: If It is rain , the wipers shall be RCMVAL_on 
+
+req_24: , the electricity circuit shall be active 
+
+req_18: If It is rain , the wipers shall be activate 
+
+req_28: , the radio shall be powered within at most 5 seconds 
+
+req_30: Before Crash is detected , the airbag shall be activated 
+
+req_12: If It is rains , the wipers shall be active 
+
+req_22: If It is rains , the wipers shall be active within 1 seconds 
+
+req_10: If A crash is detected , an emergency signal shall be sent 
+
+req_32: If It is dark before It is bright , the lights shall be RCMVAL_on 
+
+req_20: If It is rains before The windscreen is dry , the wipers shall be activated within at most 30 seconds 
+
+req_3: Before the fuel level is low , the fuel display shall be blinks 
+
+req_1: Before it is rains , the wipers shall be active 
+
+req_5: Before it is rains , the wipers shall be active 
+
+req_9: If A crash is detected , an emergency signal shall be sent within at most 10 seconds 
+
+req_27: , the motor shall be RCMVAL_on within at most 1 seconds 
+
+req_15: If It is rains , the wipers shall be RCMVAL_on within at most 30 seconds 
+
+req_25: , the light shall be RCMVAL_on 
+
+req_13: If It is rains , the wipers shall be RCMVAL_on 
+
+req_19: If It is rain , the wipers shall be activated within at most 30 seconds 
+
+req_29: If A crash is detected , the airbag shall be activated 
+
+req_17: If It is dark and Light is RCMVAL_on before It is bright , the lights shall be RCMVAL_on 
+
+req_23: If It is rains , the wipers shall be active within 1 seconds 
+
+req_11: If It is rains and The wipers is active , the wipers shall be active 
+
+req_33: , a crash shall be detected 
+
+req_21: If It is rains , the wipers shall be active within 1 seconds 
+
+req_31: If The in front vehicle is decelerates before The safety_distance is restored , the vehicle shall be decelerates 
+

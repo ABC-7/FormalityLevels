@@ -1,0 +1,15 @@
+Rreq-8: If A start_auto_control_button is enabled before It is pressed , the start_auto_control_button shall be enabled 
+
+req_48c1: If Termiante_auto_control_button is selected , a confirmation button shall be available 
+
+req_08: If Air_ok signal is low , auto_control_mode shall be terminated within 3 seconds 
+
+req_28: If A valid blood_pressure is unavailable within at least 180 seconds , manual_mode shall be triggered 
+
+req_17c3: If Alarm_reset_button is pressed , the alarm shall be disabled 
+
+req_01: If RCMVAR_lstat is RCMVAL_poweredon , the cara shall be operational 
+
+req_17c1: If Auto_control_mode is running , the cuff shall be inflatde 
+
+req_34: If Auto_control_mode is running , terminate_auto_control_button shall be available 

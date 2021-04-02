@@ -1,0 +1,84 @@
+fa_4-1: , the distance to the RCMTECHTERM_vehicle_ahead shall be less than the specified speed dependent safety distance 
+
+al_105-1: If The driver holds the RCMTECHTERM_pitman_arm RCMVAL_tip_blinking_left before The RCMTECHTERM_pitman_arm leaves RCMVAL_tip_blinking_left , a flashing shall be released the left direction indicators 
+
+fa_6-1: If The distance to the RCMTECHTERM_preceding_vehicle exceeds the speed_dependent safety distance before The set speed is reach , the vehicle shall be accelerate within 2 seconds 
+
+fa_35-1: If The RCMTECHTERM_gas_pedal exceeds 90 , the speed limit shall be deactivated 
+
+fa_99-1: If The speed of the RCMTECHTERM_preceding_vehicle is less than 20 , the distance shall be 2 
+
+fa_99-2: If Both vehicles is standing , the absolute distance shall be 2m 
+
+fa_99-4: If The RCMTECHTERM_preceding_vehicle is accelerating before The vehicle speed exceeds 20 , the distance shall be 3 
+
+fa_31-1: , the current vehicle speed shall be speed limit 
+
+TempReqId-18-1: , the duration of a flashing cycle shall be 1 second 
+
+fa_81-1: If The calculated distance is less than t , the adaptive cruise control system shall be issued acoustic alarm 
+
+fa_81-2: If The calculated distance is less than t2 , it shall be issued visual warning 
+
+TempReqId-28-1: If The voltage in the vehicle electrical system is less than 8 , a subvoltage shall be present 
+
+TempReqId-16-1: If The RCMTECHTERM_hazard_warning_light_switch is released , direction indicators shall be flash 
+
+TempReqId-16-2: If The ignition key is in the ignition lock , the pulse ratio shall be 1 
+
+TempReqId-26-1: If The light rotary switch is RCMVAL_auto , the adaptive RCMTECHTERM_high_beam_headlights shall be activated 
+
+TempReqId-14-1: , the cognitive threshold of a human observer shall be the deviation 
+
+TempReqId-24-1: If The darkness switch is activated , the ambient lighting shall be activated 
+
+TempReqId-12-1: If The RCMTECHTERM_brake_pedal exceeds RCMVAR_m , the RCMTECHTERM_braking_force shall be 100 
+
+TempReqId-34-1: If RCMTECHTERM_advancing_vehicle is recognized , the high beam illumination shall be restored within 2 seconds 
+
+TempReqId-22-1: , the daytime running light shall be activate 
+
+TempReqId-22-2: , the ambient light shall be activate 
+
+TempReqId-32-1: If The voltage in the vehicle electrical system exceeds 14 , an overvoltage shall be present 
+
+TempReqId-20-1: If Flashing cycles exceeds 1000 , the cumulated deviation shall be exceeded 5 
+
+TempReqId-30-1: If A subvoltage is present , the ambient light shall be available 
+
+fa_19-1: , the cruise control lever shall be activated the cruise control 
+
+fa_36-1: If The pressure on the RCMTECHTERM_gas_pedal is less than 90 , the speed limit shall be activated 
+
+fa_5-1: If The maximum deceleration is RCMVAL_insufficient_to_stop before A collision with the RCMTECHTERM_vehicle_ahead is RCMVAL_True , every 2 seconds the vehicle shall be warned the driver acoustical signals 
+
+fa_5-2: , the maximum deceleration shall be 5 
+
+al_144-1: , the maximum deviation of the pulse ratio shall be less than the cognitive threshold of a human observer 
+
+fa_32-1: If The speed limit function is activated , the current speed shall be exceeded the RCMTECHTERM_set_speed_limit 
+
+fa_86-1: If The velocity window is less than 20 , the distance to the RCMTECHTERM_vehicle_ahead shall be calculated 
+
+TempReqId-19-1: Before The RCMTECHTERM_hazard_warning_light_switch is deactivate , RCMTECHTERM_tip_blinking shall be activate 
+
+TempReqId-29-1: If A subvoltage is present , the adaptive RCMTECHTERM_high_beam_headlight shall be available 
+
+TempReqId-17-1: Before The car battery is empty , 
+
+TempReqId-27-1: If The camera recognizes the lights of an RCMTECHTERM_advancing_vehicle , the RCMTECHTERM_high_beam_headlight shall be low beam headlight within 5 seconds 
+
+TempReqId-25-1: If The darkness switch is activate , the RCMTECHTERM_cornering_light shall be activate 
+
+TempReqId-35-1: If The RCMTECHTERM_pitman_arm is pulled , the RCMTECHTERM_high_beam_headlight shall be activated 
+
+TempReqId-23-1: When The exterior brightness is lower , if The light rotary switch is RCMVAL_automatic , the low beam headlights shall be activate 
+
+TempReqId-23-2: If The exterior brightness exceeds RCMVAR_s2 , the low beam headlights shall be deactivate 
+
+TempReqId-33-1: If An overvoltage is present , the headlight shall be activate 
+
+TempReqId-21-1: If The light rotary switch is RCMVAL_exterior_lights_on , the driver shall be activated the low beam headlights 
+
+TempReqId-31-1: If A subvoltage is present , the RCMTECHTERM_cornering_light shall be available 
+
