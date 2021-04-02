@@ -1,0 +1,1050 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+File Measures: 
+	Number of req in file = 20
+	<SucceededRequirement>
+	<Requirement>
+		ID: [TempReqId-2:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the regulator mode = RCMVAL_init) ==> (the output regulator status = RCMVAL_init))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+		
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the regulator mode
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_init
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the output regulator status
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_init
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the regulator mode = RCMVAL_init) ==> (the output regulator status = RCMVAL_init))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+		
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the regulator mode
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_init
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the output regulator status
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_init
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-19:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the reset = RCMVAL_true) ==> (the regulator mode = RCMVAL_init))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+		
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the reset
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_true
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the regulator mode
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_init
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-18:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the monitor mode = RCMVAL_failed) ==> (the regulator mode = RCMVAL_normal))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+		
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the monitor mode
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_failed
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the regulator mode
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_normal
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-17:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the regulator mode = RCMVAL_failed) ==> (the regulator mode = RCMVAL_normal))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+		
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the regulator mode
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_failed
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the regulator mode
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_normal
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-16:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the monitor status = RCMVAL_false) ==> (the monitor init timeout = RCMVAL_true))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+		
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the monitor status
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_false
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the monitor init timeout
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_true
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-15:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the monitor status = RCMVAL_true) ==> (the monitor init timeout = RCMVAL_false))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+		
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the monitor status
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_true
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the monitor init timeout
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_false
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-14:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the monitor mode = RCMVAL_init))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Action>
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the monitor mode
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_init
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-13:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the regulator status = RCMVAL_false) ==> (the regulator init timeout = RCMVAL_true))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+		
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the regulator status
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_false
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the regulator init timeout
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_true
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-12:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the regulator status = RCMVAL_true) ==> (the regulator init timeout = RCMVAL_false))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+		
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the regulator status
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_true
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the regulator init timeout
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_false
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-11:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the regulator mode = RCMVAL_init))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Action>
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the regulator mode
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_init
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-10:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the manage monitor interface mode = the monitor mode))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Action>
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the manage monitor interface mode
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: the monitor mode
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-20:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the regulator mode = RCMVAL_init) ==> (the reset = RCMVAL_true))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+		
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the regulator mode
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_init
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the reset
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_true
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-4:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G(((the signal = RCMVAL_ok) ==> (the regulator mode = RCMVAL_failed)) ==> (the output regulator status = RCMVAL_failed))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+		
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the regulator mode
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_failed
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Trigger>
+		
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the signal
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_ok
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Trigger>
+					<Action>
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the output regulator status
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_failed
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-3:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the regulator mode = RCMVAL_normal) ==> (the output regulator status = RCMVAL_status_on))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+		
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the regulator mode
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_normal
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the output regulator status
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_status_on
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-6:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the manage monitor interface mode = RCMVAL_init) ==> (the output monitor status = RCMVAL_init))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+		
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the manage monitor interface mode
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_init
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the output monitor status
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_init
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-5:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the regulator mode = RCMVAL_failed) ==> (the heat control = RCMVAL_control_off))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+		
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the regulator mode
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_failed
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the heat control
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_control_off
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-8:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the manage monitor interface mode = RCMVAL_failed) ==> (the output monitor status = RCMVAL_failed))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+		
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the manage monitor interface mode
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_failed
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the output monitor status
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_failed
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-7:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the manage monitor interface mode = RCMVAL_normal) ==> (the output monitor status = RCMVAL_status_on))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+		
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the manage monitor interface mode
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_normal
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the output monitor status
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_status_on
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-9:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the monitor mode = RCMVAL_init) ==> (the alarm control = RCMVAL_control_off))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+		
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the monitor mode
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_init
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+		
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the alarm control
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_control_off
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+</SucceededRequirement>

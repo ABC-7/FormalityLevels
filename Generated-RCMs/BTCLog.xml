@@ -1,0 +1,2165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+File Measures: 
+	Number of req in file = 34
+	<SucceededRequirement>
+	<Requirement>
+		ID: [req_17:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G([((it = dark) AND (lights = RCMVAL_on))] ==> F(it = bright) ==> (F((the lights = RCMVAL_on) || (it = bright)) U (it = bright)))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<LogicalRelation>
+						relation: AND
+					</LogicalRelation>
+						<Condition>
+							
+							
+							<Operands>
+								Arg[0]
+								<ArgDetails>
+									Text: it
+								</ArgDetails>
+								Arg[1]
+								<ArgDetails>
+									Text: dark
+								</ArgDetails>
+							</Operands>
+							<Operator>
+								relation:is
+							</Operator>
+							Has valid-time:  false
+							Is negatted: false
+						</Condition>
+						<Condition>
+							
+							
+							<Operands>
+								Arg[0]
+								<ArgDetails>
+									Text: lights
+								</ArgDetails>
+								Arg[1]
+								<ArgDetails>
+									Text: RCMVAL_on
+								</ArgDetails>
+							</Operands>
+							<Operator>
+								relation:is
+							</Operator>
+							Has valid-time:  false
+							Is negatted: false
+						</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the lights
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_on
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+						<PreconditionalScope>
+							<ConditionalScope>
+								scope phase: EndUpPhase
+								<Condition>
+									
+									
+									<Operands>
+										Arg[0]
+										<ArgDetails>
+											Text: it
+										</ArgDetails>
+										Arg[1]
+										<ArgDetails>
+											Text: bright
+										</ArgDetails>
+									</Operands>
+									<Operator>
+										relation:is
+									</Operator>
+									Has valid-time:  false
+									Is negatted: false
+								</Condition>
+							</ConditionalScope>
+						</PreconditionalScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_7:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the fuel level = low) ==> (G{t<=10}(the fuel display = blinks)))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the fuel level
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: low
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the fuel display
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: blinks
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_2:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G(G(((an obstacle = detected) ∧ ¬ (¬an obstacle = detected) ∧ F(¬an obstacle = detected)) ==> (F((the parking sensor = beeps) || (¬an obstacle = detected)) U (¬an obstacle = detected))))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the parking sensor
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: beeps
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+						<PreconditionalScope>
+							<ConditionalScope>
+								scope phase: EndUpPhase
+								<Condition>
+									
+									
+									<Operands>
+										Arg[0]
+										<ArgDetails>
+											Text: ¬an obstacle
+										</ArgDetails>
+										Arg[1]
+										<ArgDetails>
+											Text: detected
+										</ArgDetails>
+									</Operands>
+									<Operator>
+										relation:is
+									</Operator>
+									Has valid-time:  false
+									Is negatted: true
+								</Condition>
+							</ConditionalScope>
+								<ConditionalScope>
+									scope phase: StartUpPhase
+									<Condition>
+										
+										
+										<Operands>
+											Arg[0]
+											<ArgDetails>
+												Text: an obstacle
+											</ArgDetails>
+											Arg[1]
+											<ArgDetails>
+												Text: detected
+											</ArgDetails>
+										</Operands>
+										<Operator>
+											relation:is
+										</Operator>
+										Has valid-time:  false
+										Is negatted: false
+									</Condition>
+								</ConditionalScope>
+						</PreconditionalScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_6:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G(G(((an obstacle = detected) ∧ ¬ (¬an obstacle = detected) ∧ F(¬an obstacle = detected)) ==> (F((G{t<=10}(the parking sensor = beeps)) || (¬an obstacle = detected)) U (¬an obstacle = detected))))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the parking sensor
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: beeps
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+						<PreconditionalScope>
+							<ConditionalScope>
+								scope phase: EndUpPhase
+								<Condition>
+									
+									
+									<Operands>
+										Arg[0]
+										<ArgDetails>
+											Text: ¬an obstacle
+										</ArgDetails>
+										Arg[1]
+										<ArgDetails>
+											Text: detected
+										</ArgDetails>
+									</Operands>
+									<Operator>
+										relation:is
+									</Operator>
+									Has valid-time:  false
+									Is negatted: true
+								</Condition>
+							</ConditionalScope>
+								<ConditionalScope>
+									scope phase: StartUpPhase
+									<Condition>
+										
+										
+										<Operands>
+											Arg[0]
+											<ArgDetails>
+												Text: an obstacle
+											</ArgDetails>
+											Arg[1]
+											<ArgDetails>
+												Text: detected
+											</ArgDetails>
+										</Operands>
+										<Operator>
+											relation:is
+										</Operator>
+										Has valid-time:  false
+										Is negatted: false
+									</Condition>
+								</ConditionalScope>
+						</PreconditionalScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_4:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the fuel level = low) ==> (the fuel display = blinks))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the fuel level
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: low
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the fuel display
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: blinks
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_8:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((a crash = detected) ==> (F{t<=10}(an emergency signal = sent)))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: a crash
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: detected
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: an emergency signal
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: sent
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+						<PreElapsedTime>
+							TimeType: 
+							Value: 10
+							Unit: seconds
+							QPRelation: at most
+						<FormalSemantic>
+							TechnicalOperator: 
+							Value: 10
+							</FormalSemantic>
+						<PreElapsedTime>
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_16:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((it = rain) ==> (F{t=30}(the wipers = RCMVAL_on)))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: it
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: rain
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the wipers
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_on
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+						<PreElapsedTime>
+							TimeType: 
+							Value: 30
+							Unit: seconds
+							QPRelation: 
+						<FormalSemantic>
+							TechnicalOperator: 
+							Value: 30
+							</FormalSemantic>
+						<PreElapsedTime>
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_26:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the display elements_ crrStatus = glow))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the display elements_ crrStatus
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: glow
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_14:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((it = rain) ==> (G{t=30}(the wipers = RCMVAL_on)))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: it
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: rain
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the wipers
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_on
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_24:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the electricity circuit = active))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the electricity circuit
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: active
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_18:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((G{t=1}(it = rain)) ==> (the wipers = activate))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: it
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: rain
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the wipers
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: activate
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_28:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((F{t<=5}(the radio = powered)))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the radio
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: powered
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+						<PreElapsedTime>
+							TimeType: 
+							Value: 5
+							Unit: seconds
+							QPRelation: at most
+						<FormalSemantic>
+							TechnicalOperator: 
+							Value: 5
+							</FormalSemantic>
+						<PreElapsedTime>
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_30:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G(F(crash = detected) ==> (F((¬the airbag = activated) || (a crash = detected)) U (a crash = detected)))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: ¬the airbag
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: activated
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: true
+						is repeated = false
+					</Action>
+					<RequirementScope>
+						<PreconditionalScope>
+							<ConditionalScope>
+								scope phase: EndUpPhase
+								<Condition>
+									
+									
+									<Operands>
+										Arg[0]
+										<ArgDetails>
+											Text: crash
+										</ArgDetails>
+										Arg[1]
+										<ArgDetails>
+											Text: detected
+										</ArgDetails>
+									</Operands>
+									<Operator>
+										relation:is
+									</Operator>
+									Has valid-time:  false
+									Is negatted: false
+								</Condition>
+							</ConditionalScope>
+						</PreconditionalScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_12:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((it = rains) ==> (G{t=30}(the wipers = active)))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: it
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: rains
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the wipers
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: active
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_22:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((G{t=1}(it = rains)) ==> (F{t=1}(the wipers = active)))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: it
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: rains
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the wipers
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: active
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+						<PreElapsedTime>
+							TimeType: 
+							Value: 1
+							Unit: seconds
+							QPRelation: 
+						<FormalSemantic>
+							TechnicalOperator: 
+							Value: 1
+							</FormalSemantic>
+						<PreElapsedTime>
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_10:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((a crash = detected) ==> (an emergency signal = sent))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: a crash
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: detected
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: an emergency signal
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: sent
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_32:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((it = dark) ==> F(it = bright) ==> (F((G{t<=10}(the lights = RCMVAL_on)) || (it = bright)) U (it = bright)))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: it
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: dark
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the lights
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_on
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+						<PreconditionalScope>
+							<ConditionalScope>
+								scope phase: EndUpPhase
+								<Condition>
+									
+									
+									<Operands>
+										Arg[0]
+										<ArgDetails>
+											Text: it
+										</ArgDetails>
+										Arg[1]
+										<ArgDetails>
+											Text: bright
+										</ArgDetails>
+									</Operands>
+									<Operator>
+										relation:is
+									</Operator>
+									Has valid-time:  false
+									Is negatted: false
+								</Condition>
+							</ConditionalScope>
+						</PreconditionalScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_20:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((G{t=1}(it = rains)) ==> F(the windscreen = dry) ==> (F((F{t<=30}(the wipers = activated)) || (the windscreen = dry)) U (the windscreen = dry)))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: it
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: rains
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the wipers
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: activated
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+						<PreElapsedTime>
+							TimeType: 
+							Value: 30
+							Unit: seconds
+							QPRelation: at most
+						<FormalSemantic>
+							TechnicalOperator: 
+							Value: 30
+							</FormalSemantic>
+						<PreElapsedTime>
+					</Action>
+					<RequirementScope>
+						<PreconditionalScope>
+							<ConditionalScope>
+								scope phase: EndUpPhase
+								<Condition>
+									
+									
+									<Operands>
+										Arg[0]
+										<ArgDetails>
+											Text: the windscreen
+										</ArgDetails>
+										Arg[1]
+										<ArgDetails>
+											Text: dry
+										</ArgDetails>
+									</Operands>
+									<Operator>
+										relation:is
+									</Operator>
+									Has valid-time:  false
+									Is negatted: false
+								</Condition>
+							</ConditionalScope>
+						</PreconditionalScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_3:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G(G(((the fuel level = low) ∧ ¬ (¬the fuel level = low) ∧ F(¬the fuel level = low)) ==> (F((the fuel display = blinks) || (¬the fuel level = low)) U (¬the fuel level = low))))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the fuel display
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: blinks
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+						<PreconditionalScope>
+							<ConditionalScope>
+								scope phase: EndUpPhase
+								<Condition>
+									
+									
+									<Operands>
+										Arg[0]
+										<ArgDetails>
+											Text: ¬the fuel level
+										</ArgDetails>
+										Arg[1]
+										<ArgDetails>
+											Text: low
+										</ArgDetails>
+									</Operands>
+									<Operator>
+										relation:is
+									</Operator>
+									Has valid-time:  false
+									Is negatted: true
+								</Condition>
+							</ConditionalScope>
+								<ConditionalScope>
+									scope phase: StartUpPhase
+									<Condition>
+										
+										
+										<Operands>
+											Arg[0]
+											<ArgDetails>
+												Text: the fuel level
+											</ArgDetails>
+											Arg[1]
+											<ArgDetails>
+												Text: low
+											</ArgDetails>
+										</Operands>
+										<Operator>
+											relation:is
+										</Operator>
+										Has valid-time:  false
+										Is negatted: false
+									</Condition>
+								</ConditionalScope>
+						</PreconditionalScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G(G(((it = rains) ∧ ¬ (¬it = rains) ∧ F(¬it = rains)) ==> (F((the wipers = active) || (¬it = rains)) U (¬it = rains))))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the wipers
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: active
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+						<PreconditionalScope>
+							<ConditionalScope>
+								scope phase: EndUpPhase
+								<Condition>
+									
+									
+									<Operands>
+										Arg[0]
+										<ArgDetails>
+											Text: ¬it
+										</ArgDetails>
+										Arg[1]
+										<ArgDetails>
+											Text: rains
+										</ArgDetails>
+									</Operands>
+									<Operator>
+										relation:is
+									</Operator>
+									Has valid-time:  false
+									Is negatted: true
+								</Condition>
+							</ConditionalScope>
+								<ConditionalScope>
+									scope phase: StartUpPhase
+									<Condition>
+										
+										
+										<Operands>
+											Arg[0]
+											<ArgDetails>
+												Text: it
+											</ArgDetails>
+											Arg[1]
+											<ArgDetails>
+												Text: rains
+											</ArgDetails>
+										</Operands>
+										<Operator>
+											relation:is
+										</Operator>
+										Has valid-time:  false
+										Is negatted: false
+									</Condition>
+								</ConditionalScope>
+						</PreconditionalScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_5:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G(G(((it = rains) ∧ ¬ (¬it = rains) ∧ F(¬it = rains)) ==> (F((G{t<=10}(the wipers = active)) || (¬it = rains)) U (¬it = rains))))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the wipers
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: active
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+						<PreconditionalScope>
+							<ConditionalScope>
+								scope phase: EndUpPhase
+								<Condition>
+									
+									
+									<Operands>
+										Arg[0]
+										<ArgDetails>
+											Text: ¬it
+										</ArgDetails>
+										Arg[1]
+										<ArgDetails>
+											Text: rains
+										</ArgDetails>
+									</Operands>
+									<Operator>
+										relation:is
+									</Operator>
+									Has valid-time:  false
+									Is negatted: true
+								</Condition>
+							</ConditionalScope>
+								<ConditionalScope>
+									scope phase: StartUpPhase
+									<Condition>
+										
+										
+										<Operands>
+											Arg[0]
+											<ArgDetails>
+												Text: it
+											</ArgDetails>
+											Arg[1]
+											<ArgDetails>
+												Text: rains
+											</ArgDetails>
+										</Operands>
+										<Operator>
+											relation:is
+										</Operator>
+										Has valid-time:  false
+										Is negatted: false
+									</Condition>
+								</ConditionalScope>
+						</PreconditionalScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_9:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((a crash = detected) ==> (F{t<=10}(an emergency signal = sent)))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: a crash
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: detected
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: an emergency signal
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: sent
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+						<PreElapsedTime>
+							TimeType: 
+							Value: 10
+							Unit: seconds
+							QPRelation: at most
+						<FormalSemantic>
+							TechnicalOperator: 
+							Value: 10
+							</FormalSemantic>
+						<PreElapsedTime>
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_27:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((F{t<=1}(the motor = RCMVAL_on)))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the motor
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_on
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+						<PreElapsedTime>
+							TimeType: 
+							Value: 1
+							Unit: seconds
+							QPRelation: at most
+						<FormalSemantic>
+							TechnicalOperator: 
+							Value: 1
+							</FormalSemantic>
+						<PreElapsedTime>
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_15:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((it = rains) ==> (F{t<=30}(the wipers = RCMVAL_on)))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: it
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: rains
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the wipers
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_on
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+						<PreElapsedTime>
+							TimeType: 
+							Value: 30
+							Unit: seconds
+							QPRelation: at most
+						<FormalSemantic>
+							TechnicalOperator: 
+							Value: 30
+							</FormalSemantic>
+						<PreElapsedTime>
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_25:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the light = RCMVAL_on))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the light
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_on
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_13:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((it = rains) ==> (G{t=30}(the wipers = RCMVAL_on)))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: it
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: rains
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the wipers
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_on
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_19:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((G{t=1}(it = rain)) ==> (F{t<=30}(the wipers = activated)))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: it
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: rain
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the wipers
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: activated
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+						<PreElapsedTime>
+							TimeType: 
+							Value: 30
+							Unit: seconds
+							QPRelation: at most
+						<FormalSemantic>
+							TechnicalOperator: 
+							Value: 30
+							</FormalSemantic>
+						<PreElapsedTime>
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_29:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((a crash = detected) ==> (the airbag = activated))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: a crash
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: detected
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the airbag
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: activated
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_17:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G([((it = dark) AND (lights = RCMVAL_on))] ==> F(it = bright) ==> (F((the lights = RCMVAL_on) || (it = bright)) U (it = bright)))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<LogicalRelation>
+						relation: AND
+					</LogicalRelation>
+						<Condition>
+							
+							
+							<Operands>
+								Arg[0]
+								<ArgDetails>
+									Text: it
+								</ArgDetails>
+								Arg[1]
+								<ArgDetails>
+									Text: dark
+								</ArgDetails>
+							</Operands>
+							<Operator>
+								relation:is
+							</Operator>
+							Has valid-time:  false
+							Is negatted: false
+						</Condition>
+						<Condition>
+							
+							
+							<Operands>
+								Arg[0]
+								<ArgDetails>
+									Text: lights
+								</ArgDetails>
+								Arg[1]
+								<ArgDetails>
+									Text: RCMVAL_on
+								</ArgDetails>
+							</Operands>
+							<Operator>
+								relation:is
+							</Operator>
+							Has valid-time:  false
+							Is negatted: false
+						</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the lights
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_on
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+						<PreconditionalScope>
+							<ConditionalScope>
+								scope phase: EndUpPhase
+								<Condition>
+									
+									
+									<Operands>
+										Arg[0]
+										<ArgDetails>
+											Text: it
+										</ArgDetails>
+										Arg[1]
+										<ArgDetails>
+											Text: bright
+										</ArgDetails>
+									</Operands>
+									<Operator>
+										relation:is
+									</Operator>
+									Has valid-time:  false
+									Is negatted: false
+								</Condition>
+							</ConditionalScope>
+						</PreconditionalScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_23:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((G{t=1}(it = rains)) ==> (F{t=1}(G{t=30}(the wipers = active))))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: it
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: rains
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the wipers
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: active
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+						<PreElapsedTime>
+							TimeType: 
+							Value: 1
+							Unit: seconds
+							QPRelation: 
+						<FormalSemantic>
+							TechnicalOperator: 
+							Value: 1
+							</FormalSemantic>
+						<PreElapsedTime>
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_11:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G([((it = rains) AND (the wipers = active))] ==> (G{t=30}(the wipers = active)))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<LogicalRelation>
+						relation: AND
+					</LogicalRelation>
+						<Condition>
+							
+							
+							<Operands>
+								Arg[0]
+								<ArgDetails>
+									Text: it
+								</ArgDetails>
+								Arg[1]
+								<ArgDetails>
+									Text: rains
+								</ArgDetails>
+							</Operands>
+							<Operator>
+								relation:is
+							</Operator>
+							Has valid-time:  false
+							Is negatted: false
+						</Condition>
+						<Condition>
+							
+							
+							<Operands>
+								Arg[0]
+								<ArgDetails>
+									Text: the wipers
+								</ArgDetails>
+								Arg[1]
+								<ArgDetails>
+									Text: active
+								</ArgDetails>
+							</Operands>
+							<Operator>
+								relation:is
+							</Operator>
+							Has valid-time:  false
+							Is negatted: false
+						</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the wipers
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: active
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_33:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((a crash = detected) ==> F((an emergency signal = sent) ==> (the airbag = activated)))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: a crash
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: detected
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_21:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((G{t=1}(it = rains)) ==> (F{t=1}(G{t=30}(the wipers = active))))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: it
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: rains
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the wipers
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: active
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+						<PreElapsedTime>
+							TimeType: 
+							Value: 1
+							Unit: seconds
+							QPRelation: 
+						<FormalSemantic>
+							TechnicalOperator: 
+							Value: 1
+							</FormalSemantic>
+						<PreElapsedTime>
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_31:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the in front vehicle = decelerates) ==> F(G{t<=2}(the safety_distance = restored)) ==> (F((the vehicle = decelerates) || (G{t<=2}(the safety_distance = restored))) U (G{t<=2}(the safety_distance = restored))))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the in front vehicle
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: decelerates
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the vehicle
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: decelerates
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+						<PreconditionalScope>
+							<ConditionalScope>
+								scope phase: EndUpPhase
+								<Condition>
+									
+									
+									<Operands>
+										Arg[0]
+										<ArgDetails>
+											Text: the safety_distance
+										</ArgDetails>
+										Arg[1]
+										<ArgDetails>
+											Text: restored
+										</ArgDetails>
+									</Operands>
+									<Operator>
+										relation:is
+									</Operator>
+									Has valid-time:  false
+									Is negatted: false
+								</Condition>
+							</ConditionalScope>
+						</PreconditionalScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+</SucceededRequirement>

@@ -1,0 +1,2393 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+File Measures: 
+	Number of req in file = 46
+	<SucceededRequirement>
+	<Requirement>
+		ID: [TempReqId-16-2:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((in(the ignition key, the ignition lock)) ==> (the pulse ratio = 1))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the ignition key
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text:  the ignition lock
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:be in
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the pulse ratio
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: 1
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+	
+	<Requirement>
+		ID: [TempReqId-27-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((recognize(the camera, the lights of an RCMTECHTERM_advancing_vehicle)) ==> (F{t=5}(the RCMTECHTERM_high_beam_headlight = low beam headlight)))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the camera
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text:  the lights of an RCMTECHTERM_advancing_vehicle
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:recognize
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the RCMTECHTERM_high_beam_headlight
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: low beam headlight
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+						<PreElapsedTime>
+							TimeType: 
+							Value: 5
+							Unit: seconds
+							QPRelation: 
+						<FormalSemantic>
+							TechnicalOperator: 
+							Value: 5
+							</FormalSemantic>
+						<PreElapsedTime>
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [fa_4-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the distance to the RCMTECHTERM_vehicle_ahead < the specified speed dependent safety distance)) ==> (the vehicle brakes = activated))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the distance to the RCMTECHTERM_vehicle_ahead
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: the specified speed dependent safety distance
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is less than
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [al_105-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((G{t>=5}(hold_to(the driver, the RCMTECHTERM_pitman_arm, RCMVAL_tip_blinking_left))) ==> F(leave(the RCMTECHTERM_pitman_arm, RCMVAL_tip_blinking_left)) ==> (F((release_for(a flashing, the left direction indicators)) || (leave(the RCMTECHTERM_pitman_arm, RCMVAL_tip_blinking_left))) U (leave(the RCMTECHTERM_pitman_arm, RCMVAL_tip_blinking_left))))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the driver
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text:  the RCMTECHTERM_pitman_arm
+							</ArgDetails>
+							Arg[2]
+							<ArgDetails>
+								Text:  RCMVAL_tip_blinking_left
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:hold
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: a flashing
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text:  the left direction indicators
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:release
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+						<PreconditionalScope>
+							<ConditionalScope>
+								scope phase: EndUpPhase
+								<Condition>
+									
+									
+									<Operands>
+										Arg[0]
+										<ArgDetails>
+											Text: the RCMTECHTERM_pitman_arm
+										</ArgDetails>
+										Arg[1]
+										<ArgDetails>
+											Text:  RCMVAL_tip_blinking_left
+										</ArgDetails>
+									</Operands>
+									<Operator>
+										relation:leave
+									</Operator>
+									Has valid-time:  false
+									Is negatted: false
+								</Condition>
+							</ConditionalScope>
+						</PreconditionalScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [fa_6-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the distance to the RCMTECHTERM_preceding_vehicle > the speed_dependent safety distance) ==> F(the set speed = reach) ==> (F((F{t=2}(the vehicle = accelerate)) || (the set speed = reach)) U (the set speed = reach)))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the distance to the RCMTECHTERM_preceding_vehicle
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: the speed_dependent safety distance
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:exceeds
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the vehicle
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: accelerate
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+						<PreElapsedTime>
+							TimeType: 
+							Value: 2
+							Unit: seconds
+							QPRelation: 
+						<FormalSemantic>
+							TechnicalOperator: 
+							Value: 2
+							</FormalSemantic>
+						<PreElapsedTime>
+					</Action>
+					<RequirementScope>
+						<PreconditionalScope>
+							<ConditionalScope>
+								scope phase: EndUpPhase
+								<Condition>
+									
+									
+									<Operands>
+										Arg[0]
+										<ArgDetails>
+											Text: the set speed
+										</ArgDetails>
+										Arg[1]
+										<ArgDetails>
+											Text: reach
+										</ArgDetails>
+									</Operands>
+									<Operator>
+										relation:is
+									</Operator>
+									Has valid-time:  false
+									Is negatted: false
+								</Condition>
+							</ConditionalScope>
+						</PreconditionalScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [fa_35-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the RCMTECHTERM_gas_pedal > 90) ==> (the speed limit = deactivated))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the RCMTECHTERM_gas_pedal
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: 90
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:exceeds
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the speed limit
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: deactivated
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [fa_99-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the speed of the RCMTECHTERM_preceding_vehicle < 20) ==> (the distance = 2))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the speed of the RCMTECHTERM_preceding_vehicle
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: 20
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is less than
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the distance
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: 2
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [fa_99-2:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((both vehicles = standing) ==> (the absolute distance = 2m))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: both vehicles
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: standing
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the absolute distance
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: 2m
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [fa_99-4:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the RCMTECHTERM_preceding_vehicle = accelerating) ==> F(the vehicle speed > 20) ==> (F((the distance = 3) || (the vehicle speed > 20)) U (the vehicle speed > 20)))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the RCMTECHTERM_preceding_vehicle
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: accelerating
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the distance
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: 3
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+						<PreconditionalScope>
+							<ConditionalScope>
+								scope phase: EndUpPhase
+								<Condition>
+									
+									
+									<Operands>
+										Arg[0]
+										<ArgDetails>
+											Text: the vehicle speed
+										</ArgDetails>
+										Arg[1]
+										<ArgDetails>
+											Text: 20
+										</ArgDetails>
+									</Operands>
+									<Operator>
+										relation:exceeds
+									</Operator>
+									Has valid-time:  false
+									Is negatted: false
+								</Condition>
+							</ConditionalScope>
+						</PreconditionalScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [fa_31-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the current vehicle speed = speed limit))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the current vehicle speed
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: speed limit
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-18-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the duration of a flashing cycle = 1 second))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the duration of a flashing cycle
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: 1 second
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [fa_81-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the calculated distance < t) ==> (issue(the adaptive cruise control system, acoustic alarm)))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the calculated distance
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: t
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is less than
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the adaptive cruise control system
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text:  acoustic alarm
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:issue
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [fa_81-2:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the calculated distance < t2) ==> (issue(it, visual warning)))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the calculated distance
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: t2
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is less than
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: it
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text:  visual warning
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:issue
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-28-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the voltage in the vehicle electrical system < 8) ==> (a subvoltage = present))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the voltage in the vehicle electrical system
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: 8
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is less than
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: a subvoltage
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: present
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-16-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the RCMTECHTERM_hazard_warning_light_switch = released) ==> (direction indicators = flash))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the RCMTECHTERM_hazard_warning_light_switch
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: released
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: direction indicators
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: flash
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-16-2:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((in(the ignition key, the ignition lock)) ==> (the pulse ratio = 1))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the ignition key
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text:  the ignition lock
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:be in
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the pulse ratio
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: 1
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-16-3:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((¬in(the ignition key, the lock)) ==> (the pulse ratio = 5))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-26-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the light rotary switch = RCMVAL_auto) ==> (the adaptive RCMTECHTERM_high_beam_headlights = activated))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the light rotary switch
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_auto
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the adaptive RCMTECHTERM_high_beam_headlights
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: activated
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-14-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the cognitive threshold of a human observer = the deviation))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the cognitive threshold of a human observer
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: the deviation
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-24-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the darkness switch = activated) ==> (¬the ambient lighting = activated))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the darkness switch
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: activated
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: ¬the ambient lighting
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: activated
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: true
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-12-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the RCMTECHTERM_brake_pedal > RCMVAR_m) ==> (the RCMTECHTERM_braking_force = 100))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the RCMTECHTERM_brake_pedal
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAR_m
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:exceeds
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the RCMTECHTERM_braking_force
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: 100
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-34-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((¬RCMTECHTERM_advancing_vehicle = recognized) ==> (F{t=2}(the high beam illumination = restored)))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: ¬RCMTECHTERM_advancing_vehicle
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: recognized
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: true
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the high beam illumination
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: restored
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+						<PreElapsedTime>
+							TimeType: 
+							Value: 2
+							Unit: seconds
+							QPRelation: 
+						<FormalSemantic>
+							TechnicalOperator: 
+							Value: 2
+							</FormalSemantic>
+						<PreElapsedTime>
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-22-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the daytime running light = activate) ==> (start(the engine) ==> (the low beam headlights = activate))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the daytime running light
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: activate
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-22-2:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the ambient light = activate)==> (the low beam headlights=active))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the ambient light
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: activate
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-32-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the voltage in the vehicle electrical system > 14) ==> (an overvoltage = present))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the voltage in the vehicle electrical system
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: 14
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:exceeds
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: an overvoltage
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: present
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-20-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((flashing cycles > 1000) ==> (¬the cumulated deviation > 5))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: flashing cycles
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: 1000
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:exceeds
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: ¬the cumulated deviation
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: 5
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:exceeds
+						</Operator>
+						Has valid-time:  false
+						Is negatted: true
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-30-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((a subvoltage = present) ==> (¬the ambient light = available))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: a subvoltage
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: present
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: ¬the ambient light
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: available
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: true
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [fa_19-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((activate(the cruise control lever, the cruise control)))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the cruise control lever
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text:  the cruise control
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:activate
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [fa_36-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the pressure on the RCMTECHTERM_gas_pedal < 90) ==> (the speed limit = activated))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the pressure on the RCMTECHTERM_gas_pedal
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: 90
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is less than
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the speed limit
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: activated
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [fa_5-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G(F(a collision with the RCMTECHTERM_vehicle_ahead = RCMVAL_True) ==> (F((the maximum deceleration = RCMVAL_insufficient_to_stop) || (a collision with the RCMTECHTERM_vehicle_ahead = RCMVAL_True)) U (a collision with the RCMTECHTERM_vehicle_ahead = RCMVAL_True)) ==> (G(F{t=2}(G{t=1}(warn_by(the vehicle, the driver, acoustical signals))))))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the maximum deceleration
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_insufficient_to_stop
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the vehicle
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text:  the driver
+							</ArgDetails>
+							Arg[2]
+							<ArgDetails>
+								Text:  acoustical signals
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:warn
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+						<InBetweenTime>
+							TimeType: 
+							Value: 2
+							Unit: seconds
+							QPRelation: 
+						<FormalSemantic>
+							TechnicalOperator: 
+							Value: 2
+							</FormalSemantic>
+						<InBetweenTime>
+					</Action>
+					<RequirementScope>
+						<PreconditionalScope>
+							<ConditionalScope>
+								scope phase: EndUpPhase
+								<Condition>
+									
+									
+									<Operands>
+										Arg[0]
+										<ArgDetails>
+											Text: a collision with the RCMTECHTERM_vehicle_ahead
+										</ArgDetails>
+										Arg[1]
+										<ArgDetails>
+											Text: RCMVAL_True
+										</ArgDetails>
+									</Operands>
+									<Operator>
+										relation:is
+									</Operator>
+									Has valid-time:  false
+									Is negatted: false
+								</Condition>
+							</ConditionalScope>
+						</PreconditionalScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [fa_5-2:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the maximum deceleration = 5))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the maximum deceleration
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: 5
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [al_144-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the maximum deviation of the pulse ratio < the cognitive threshold of a human observer))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the maximum deviation of the pulse ratio
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: the cognitive threshold of a human observer
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is less than
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [fa_32-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the speed limit function = activated) ==> (¬the current speed > the RCMTECHTERM_set_speed_limit))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the speed limit function
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: activated
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: ¬the current speed
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: the RCMTECHTERM_set_speed_limit
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:exceeds
+						</Operator>
+						Has valid-time:  false
+						Is negatted: true
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [fa_86-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the velocity window < 20) ==> (the distance to the RCMTECHTERM_vehicle_ahead = calculated))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the velocity window
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: 20
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is less than
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the distance to the RCMTECHTERM_vehicle_ahead
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: calculated
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-19-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G(F(the RCMTECHTERM_hazard_warning_light_switch = deactivate) ==> (F((RCMTECHTERM_tip_blinking = activate) || (the RCMTECHTERM_hazard_warning_light_switch = deactivate)) U (the RCMTECHTERM_hazard_warning_light_switch = deactivate)) ==> G(((the deactivation of the RCMTECHTERM_hazard_warning_light_switch = RCMVAL_True) ∧ ¬ (¬the deactivation of the RCMTECHTERM_hazard_warning_light_switch = RCMVAL_True) ∧ F(¬the deactivation of the RCMTECHTERM_hazard_warning_light_switch = RCMVAL_True)) ==> F((¬it = activate) || (¬the deactivation of the RCMTECHTERM_hazard_warning_light_switch = RCMVAL_True)) U (¬the deactivation of the RCMTECHTERM_hazard_warning_light_switch = RCMVAL_True))))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: RCMTECHTERM_tip_blinking
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: activate
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+						<PreconditionalScope>
+							<ConditionalScope>
+								scope phase: EndUpPhase
+								<Condition>
+									
+									
+									<Operands>
+										Arg[0]
+										<ArgDetails>
+											Text: the RCMTECHTERM_hazard_warning_light_switch
+										</ArgDetails>
+										Arg[1]
+										<ArgDetails>
+											Text: deactivate
+										</ArgDetails>
+									</Operands>
+									<Operator>
+										relation:is
+									</Operator>
+									Has valid-time:  false
+									Is negatted: false
+								</Condition>
+							</ConditionalScope>
+						</PreconditionalScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-29-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((a subvoltage = present) ==> (¬the adaptive RCMTECHTERM_high_beam_headlight = available))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: a subvoltage
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: present
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: ¬the adaptive RCMTECHTERM_high_beam_headlight
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: available
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: true
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-17-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((an emergency situation=True) ==> F(the car battery = empty) ==> (F((the RCMTECHTERM_hazard_warning_light_switch = active) || (the car battery = empty)) U (the car battery = empty)))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<RequirementScope>
+						<PreconditionalScope>
+							<ConditionalScope>
+								scope phase: EndUpPhase
+								<Condition>
+									
+									
+									<Operands>
+										Arg[0]
+										<ArgDetails>
+											Text: the car battery
+										</ArgDetails>
+										Arg[1]
+										<ArgDetails>
+											Text: empty
+										</ArgDetails>
+									</Operands>
+									<Operator>
+										relation:is
+									</Operator>
+									Has valid-time:  false
+									Is negatted: false
+								</Condition>
+							</ConditionalScope>
+						</PreconditionalScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-27-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((recognize(the camera, the lights of an RCMTECHTERM_advancing_vehicle)) ==> (F{t=5}(the RCMTECHTERM_high_beam_headlight = low beam headlight)))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the camera
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text:  the lights of an RCMTECHTERM_advancing_vehicle
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:recognize
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the RCMTECHTERM_high_beam_headlight
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: low beam headlight
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+						<PreElapsedTime>
+							TimeType: 
+							Value: 5
+							Unit: seconds
+							QPRelation: 
+						<FormalSemantic>
+							TechnicalOperator: 
+							Value: 5
+							</FormalSemantic>
+						<PreElapsedTime>
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-25-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the darkness switch = activate) ==> (¬the RCMTECHTERM_cornering_light = activate))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the darkness switch
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: activate
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: ¬the RCMTECHTERM_cornering_light
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: activate
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: true
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-35-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the RCMTECHTERM_pitman_arm = pulled) ==> (the RCMTECHTERM_high_beam_headlight = activated))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the RCMTECHTERM_pitman_arm
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: pulled
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the RCMTECHTERM_high_beam_headlight
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: activated
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-23-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G(((the exterior brightness = lower) ==> (the light rotary switch = RCMVAL_automatic)) ==> (G{t>=3}(the low beam headlights = activate)))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the light rotary switch
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_automatic
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Trigger>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the exterior brightness
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: lower
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Trigger>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the low beam headlights
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: activate
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-23-2:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the exterior brightness > RCMVAR_s2) ==> (G{t>=3}(the low beam headlights = deactivate)))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the exterior brightness
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAR_s2
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:exceeds
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the low beam headlights
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: deactivate
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-33-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((an overvoltage = present) ==> (the headlight = activate))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: an overvoltage
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: present
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the headlight
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: activate
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-21-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((the light rotary switch = RCMVAL_exterior_lights_on) ==> (activate(the driver, the low beam headlights)))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the light rotary switch
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_exterior_lights_on
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the driver
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text:  the low beam headlights
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:activate
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [TempReqId-31-1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((a subvoltage = present) ==> (¬the RCMTECHTERM_cornering_light = available))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: a subvoltage
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: present
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+						
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: ¬the RCMTECHTERM_cornering_light
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: available
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: true
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+</SucceededRequirement>

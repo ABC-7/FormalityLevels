@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+File Measures: 
+	Number of req in file = 8
+	<SucceededRequirement>
+	<Requirement>
+		ID: [Rreq-8: ]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((a start_auto_control_button = enabled) ==> F(it = pressed) ==> (F((the start_auto_control_button = enabled) || (it = pressed)) U (it = pressed)))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: a start_auto_control_button
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: enabled
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+	
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the start_auto_control_button
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: enabled
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+						<PreconditionalScope>
+							<ConditionalScope>
+								scope phase: EndUpPhase
+								<Condition>
+			
+				
+									<Operands>
+										Arg[0]
+										<ArgDetails>
+											Text: it
+										</ArgDetails>
+										Arg[1]
+										<ArgDetails>
+											Text: pressed
+										</ArgDetails>
+									</Operands>
+									<Operator>
+										relation:is
+									</Operator>
+									Has valid-time:  false
+									Is negatted: false
+								</Condition>
+							</ConditionalScope>
+						</PreconditionalScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_48c1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula:  G((termiante_auto_control_button = selected) ==> (a confirmation button = available))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+
+	
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: termiante_auto_control_button
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: selected
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+	
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: a confirmation button
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: available
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_08:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((air_ok signal = low) ==> (F{t=3}(auto_control_mode = terminated)))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+
+	
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: air_ok signal
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: low
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+	
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: auto_control_mode
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: terminated
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+						<PreElapsedTime>
+							TimeType: 
+							Value: 3
+							Unit: seconds
+							QPRelation: 
+						<FormalSemantic>
+							TechnicalOperator: 
+							Value: 3
+							</FormalSemantic>
+						<PreElapsedTime>
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_28:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((F{t>=180}(a valid blood_pressure = unavailable))l ==> (manual_mode = triggered))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Action>
+	
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: a valid blood_pressure
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: unavailable
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+						<PreElapsedTime>
+							TimeType: 
+							Value: 180
+							Unit: seconds
+							QPRelation: at least
+						<FormalSemantic>
+							TechnicalOperator: 
+							Value: 180
+							</FormalSemantic>
+						<PreElapsedTime>
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_17c3:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((alarm_reset_button = pressed) ==> (the alarm = disabled))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+
+	
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: alarm_reset_button
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: pressed
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+	
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the alarm
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: disabled
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_01:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((RCMVAR_lstat = RCMVAL_poweredon) ==> (the cara = operational))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+
+	
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: RCMVAR_lstat
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: RCMVAL_poweredon
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+	
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the cara
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: operational
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_17c1:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((auto_control_mode = running) ==> (the cuff = inflatde))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+
+	
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: auto_control_mode
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: running
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+	
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: the cuff
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: inflatde
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+	<Requirement>
+		ID: [req_34:]
+		<PrimitiveReq>
+			<PR>
+				<Formal-Representation>
+					MTL-Formula: G((auto_control_mode = running) ==> (terminate_auto_control_button = available))
+				</Formal-Representation>
+				<RCMDetails>
+					
+					<Condition>
+
+	
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: auto_control_mode
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: running
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+					</Condition>
+					<Action>
+	
+						<Operands>
+							Arg[0]
+							<ArgDetails>
+								Text: terminate_auto_control_button
+							</ArgDetails>
+							Arg[1]
+							<ArgDetails>
+								Text: available
+							</ArgDetails>
+						</Operands>
+						<Operator>
+							relation:is
+						</Operator>
+						Has valid-time:  false
+						Is negatted: false
+						is repeated = false
+					</Action>
+					<RequirementScope>
+					</RequirementScope>
+				</RCMDetails>
+			</PR>
+		</PrimitiveReq>
+	</Requirement>
+
+</SucceededRequirement>
+</log>
